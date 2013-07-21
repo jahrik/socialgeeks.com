@@ -213,6 +213,38 @@ h1 {
 	margin: auto;
 }
 
+.highlightBox {
+	width: 1003px; 
+	height: 146px; 
+	background: url(/public/images/frames/highlightBox.png) center no-repeat;
+}
+
+.highlightBox .panel {
+	float: left; 
+	width: 327px; 
+	margin-top: 30px;
+	cursor: pointer;
+}
+
+.highlightBox .panel img {
+	margin-left: 35px;
+	float: left;
+}
+
+.highlightBox .panel div {
+	float: left;
+	width: 200px;
+	font-family: Anivers, sans-serif;
+	font-size: 13px;
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+.highlightBox h3 {
+	font-size: 16px;
+	margin-bottom: 4px;
+}
+
 #signUpBox {
 	width: 650px; height: 412px; 
 	background-image: url(/public/images/main/bg_signUp.jpg);
