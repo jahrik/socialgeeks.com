@@ -1,0 +1,1039 @@
+/* CSS Reset (props to Eric Meyer, http://meyerweb.com) 
+---------------------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-style: inherit;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+:focus {
+	outline: 0;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+/* Custom Fonts
+---------------------------------------------------------------------------------------------------*/
+@font-face { font-family: Anivers; src: url('/public/fonts/Anivers_Regular.otf'); } 
+@font-face { font-family: FolksBold; src: url('/public/fonts/Folks-Bold.ttf'); } 
+@font-face { font-family: FolksLight; src: url('/public/fonts/Folks-Light.ttf'); } 
+@font-face { font-family: Folks; src: url('/public/fonts/Folks-Normal.ttf'); } 
+@font-face { font-family: SansumiBold; src: url('/public/fonts/Sansumi-Bold.ttf'); } 
+
+/* Main CSS
+---------------------------------------------------------------------------------------------------*/
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #182e4f;
+	height: 100%;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+#header {
+	width: 100%; height: 212px;
+	background-color: #000000;
+	border-bottom: 1px solid #1e4380;
+}
+
+#header .background {
+	position: relative;
+	width: 100%; height: 212px;
+	min-width: 980px;
+	background: url(/public/images/main/bg_header.jpg) center no-repeat;
+}
+
+#header .container {
+	position: relative;
+	width: 980px; height: 212px;
+	margin: auto;
+}
+
+#header .logo {
+	position: absolute;
+	top: 48px;
+}	
+
+#header .slogan {
+	position: absolute;
+	top: 130px;	left: 116px;
+	font-family: Anivers, sans-serif;
+	font-size: 18px;
+	color: #e1e1e1;
+	line-height: 22px;
+}	
+
+#header .subMenu {
+	position: absolute;
+	top: 14px; right: 0px;
+}
+
+#header .subMenu img { margin-left: 20px; }
+
+#header .signUp {
+	width: 367px; height: 130px;
+	position: absolute;
+	top: 70px; right: -13px;
+	background-image: url(/public/images/main/signUpBorder.png);
+	font-family: Anivers, sans-serif;
+	color: #FFFFFF;
+}
+
+#header .signUp .new {
+	position: absolute;
+	top: 23px; left: 27px;
+	font-size: 16px;
+	line-height: 17px;
+}
+
+#header .signUp .new span {
+	font-size: 12px;
+	color: #999999;
+}
+
+#header .signUp .button {
+	position: absolute;
+	top: 15px; right: 21px;
+	cursor: pointer;
+}
+
+#header .signUp .button:hover {
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+#submitSignInButton, #submitSignUpButton {
+	cursor: pointer;
+}
+
+#submitSignInButton:hover, #submitSignUpButton:hover {
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+
+#header .signUp .account {
+	position: absolute;
+	top: 83px; right: 103px;
+	font-size: 12px;
+}
+
+#header .signUp .signIn {
+	position: absolute;
+	top: 7px; right: 24px;
+	font-size: 12px;
+	
+}
+
+#header .signUp #toggle {
+	position: absolute;
+	top: 7px; right: 5px;
+	width: 12px; height: 12px;
+	background-image: url(/public/images/main/toggleArrowDown.png);
+}
+
+#header .signUp #signInButton {
+	position: absolute;
+	top: 76px; right: 25px;
+	width: 66px; height: 25px;
+	cursor: pointer;
+	z-index: 301;
+}
+
+
+
+#header .signUp #signInPanel {
+	position: absolute;
+	top: 74px; right: 12px;
+	background: url(/public/images/main/signInPanel.png);
+	width: 343px;
+	height: 217px;
+	z-index: 300;
+}
+
+#main {
+	width: 100%;
+}
+
+#main .background {
+	position: relative;
+	width: 100%; height: 605px;
+	min-width: 980px;
+	background: url(/public/images/main/bg_content.jpg) center no-repeat;
+}
+
+#main .container {
+	padding-top: 15px;
+	position: relative;
+	width: 1006px;
+	margin: auto;
+}
+
+#signUpBox {
+	width: 650px; height: 412px; 
+	background-image: url(/public/images/main/bg_signUp.jpg);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #747474;
+}
+
+#signUpBox .header {
+	font-family: Anivers, sans-serif;
+	font-size: 30px;
+	color: #000000;
+	padding: 15px 0 20px 20px;
+	border-bottom: 1px #999999 dashed; 	
+	margin-bottom: 25px;
+}
+
+#headerSub {
+	width: 100%; height: 56px;
+	background-color: #000000;
+	border-bottom: 1px solid #1e4380;
+}
+
+#headerSub .background {
+	position: relative;
+	width: 100%; height: 56px;
+	min-width: 980px;
+	background: url(/public/images/main/bg_headerSub.jpg) center no-repeat;
+}
+
+#headerSub .container {
+	position: relative;
+	width: 980px; height: 56px;
+	margin: auto;
+}
+
+#headerSub .logo {
+	position: absolute;
+	top: 4px;
+}	
+
+#headerSub #accountMenu {
+	position: absolute;
+	top: 13px;
+	right: 0px;
+	width: 57px;
+	height: 34px;
+	cursor: pointer;
+	background-image: url(/public/images/main/bg_accountMenu.png); 
+}
+
+#headerSub #accountMenuPanel {
+	position: absolute;
+	top: -2px; right: -12px;
+	background: url(/public/images/main/accountMenuPanel.png);
+	width: 170px;
+	height: 193px;
+	z-index: 300;
+	display: none;
+}
+
+#headerSub #accountMenuPanel ul {
+	padding: 43px 0 0 25px;
+}
+#headerSub #accountMenuPanel li {
+	font-family: Anivers, sans-serif;
+	margin-bottom: 4px;
+	font-size: 13px;
+}
+#headerSub #accountMenuPanel a {
+	color: #666666;
+	text-decoration: none;
+}
+#headerSub #accountMenuPanel a:hover {
+	color: #000000;
+	text-decoration: none;
+}
+
+#headerSub #toggle {
+	position: absolute;
+	top: 11px;
+	left: 38px;
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+	background-image: url(/public/images/main/toggleArrowDown.png); 
+	z-index: 301;
+}
+
+#headerSub .avatar {
+	position: absolute;
+	top: 5px;
+	left: 6px;
+	color: #FFFFFF;
+	font-size: 14px;
+	cursor: pointer;
+	z-index: 301;
+}
+
+.whiteGreyBoxTop {
+	background: url(/public/images/frames/whiteGreyTop.png) no-repeat;
+	padding-top: 20px;
+}
+.whiteBoxTop {
+	background: url(/public/images/frames/whiteTop.png) no-repeat;
+	padding-top: 20px;
+}
+.whiteBoxBG {
+	background: url(/public/images/frames/whiteBG.png) repeat-y;
+}
+.whiteGreyBoxBottom {
+	background: url(/public/images/frames/whiteGreyBottom.png) bottom no-repeat;
+	padding-top: 78px;
+}
+.blackBoxTop {
+	background: url(/public/images/frames/blackTop.png) no-repeat;
+	padding-top: 19px;
+}
+.blackBoxBG {
+	background: url(/public/images/frames/blackBG.png) repeat-y;
+}
+.blackBoxBottom {
+	background: url(/public/images/frames/blackBottom.png) bottom no-repeat;
+	padding-top: 35px;
+}
+.blackSmBoxTop {
+	background: url(/public/images/frames/blackSmTop.png) no-repeat;
+	padding-top: 19px;
+}
+.blackSmBoxBG {
+	background: url(/public/images/frames/blackSmBG.png) repeat-y;
+	color: #FFFFFF;
+}
+.blackSmBoxBottom {
+	background: url(/public/images/frames/blackSmBottom.png) bottom no-repeat;
+	padding-top: 35px;
+}
+
+.wallBoxTop {
+	background: url(/public/images/frames/wallTop.png) no-repeat;
+	padding-top: 19px;
+}
+.wallBoxBG {
+	background: url(/public/images/frames/wallBG.png) repeat-y;
+}
+.wallBoxBottom {
+	background: url(/public/images/frames/wallBottom.png) bottom no-repeat;
+	padding-top: 78px;
+}
+
+#profile .avatar {
+	margin: 4px 18px; 
+	float: left; 
+	width: 85px; 
+	height: 85px; 
+	border: 1px solid #CACACA;
+}
+
+#profile .info {
+	margin-top: 5px;
+}
+
+#profile .info h1 {
+	color: #333;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+#profile .info .fullname {
+	font-size: 12px;
+	color:#666666;
+}
+
+.betaNotice {
+	float: left; 
+	width: 235px;
+	text-align: justify; 
+	font-size: 10px; 
+	color:#CCCCCC;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+}
+
+.betaNotice a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+.betaNotice a:hover {
+	text-decoration: underline;
+}
+
+.qtip-content {
+    font-size:10px;
+}
+
+.clear {
+	clear: both;
+}
+
+.avatar85 {
+	width: 85px;
+	height: 85px;
+}
+
+.avatar24 {
+	width: 24px;
+	height: 24px;
+}
+
+#process { display: none; }
+
+
+a.whiteButton {
+    background: transparent url('/public/images/main/button_customWhiteR.png') no-repeat scroll top right;
+    color: #666;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 23px;
+    margin-right: 8px;
+    padding-right: 10px; /* sliding doors padding */
+    text-decoration: none;
+	cursor: pointer;
+}
+
+a.whiteButton img {
+	vertical-align: middle;
+	margin-right: 4px;
+}
+
+a.whiteButton span {
+    background: transparent url('/public/images/main/button_customWhiteL.png') no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 4px 0 5px 10px;
+	font-size: 9px;
+	font-weight: bold;
+	cursor: pointer;
+}
+a.whiteButton:hover {
+    color: #333;
+}
+
+a.whiteButton:active {
+    background: transparent url('/public/images/main/button_customWhiteSR.png') no-repeat scroll top right;
+    background-position: bottom right;
+    outline: none; /* hide dotted outline in Firefox */
+}
+
+a.whiteButton:active span {
+    background: transparent url('/public/images/main/button_customWhiteSL.png') no-repeat;
+    padding: 5px 0 5px 10px;
+}
+
+a.whiteButtonS {
+    background: transparent url('/public/images/main/button_customWhiteSR.png') no-repeat scroll top right;
+    color: #333;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 23px;
+    margin-right: 8px;
+    padding-right: 10px; /* sliding doors padding */
+    text-decoration: none;
+	cursor: pointer;
+}
+
+a.whiteButtonS span {
+    background: transparent url('/public/images/main/button_customWhiteSL.png') no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 5px 0 5px 10px;
+	font-size: 9px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/*    */
+
+form.jqtransformdone label{	
+	text-align: right; width: 70px;
+	font-family: Anivers, sans-serif;
+	font-size: 16px;
+	color:#000;
+	padding-top: 4px;
+}
+
+a.jqTransformCheckbox {
+	width: 15px;
+}
+
+#signInPanel label { font-size: 14px; }
+
+
+
+/* Wall
+------------------------------------------------------------------------------------------- */
+
+#wall .wallpost {
+    width: 622px;
+	margin: 0px;
+	border-top: 1px dotted #c4c4c4;
+	position: relative;
+}
+
+#wall .wallpost .avatar {
+	float: left;
+	margin: 9px 0 0 9px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid #c4c4c4;
+}
+
+#wall .wallpost .content {
+	width: 554px;
+	float: right;
+}
+	
+#wall .wallpost .username {
+	float: left;
+	width: 150px;
+	font-weight: bold;
+	font-size: 11px;
+	color: #000;
+	margin-top: 14px
+}
+
+#wall .wallpost .username span { /* realname? */
+	font-size: 10px;
+	font-weight: normal;
+	color: #333;
+}
+
+#wall .wallpost .post {
+	float: right;
+	width: 383px;
+	font-size: 11px;
+	padding: 14px 10px 14px 10px;
+	background-color: #e5e5e5;
+}
+
+#wall .wallpost .footer {
+	position: relative;
+}
+
+#wall .wallpost .timestamp {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-size: 10px;
+	background-color: #fafafa;
+	color: #999999;
+	padding-right: 3px;
+	margin-top: -9px;
+	z-index: 51;
+}
+
+
+#wall .wallpost .subline {
+	position: absolute;
+	top: 7px;
+	left: 1px;
+	width: 553px;
+	height: 1px;
+	border-top: 1px dotted #c4c4c4;
+	margin-top: -7px;
+	z-index: 50;
+}
+
+
+
+#wall .wallpost .commentPanel {
+	position: relative;
+	width: 544px; 
+	margin-left: 10px;
+}
+
+
+#wall .wallpost .commentAvatar {
+	width: 24px;
+	height: 24px;
+	float: left;
+	margin-top: 13px;
+	border: 1px solid #c4c4c4;
+}
+
+#wall .wallpost .commentContent {
+	width: 510px;
+	float: right;
+}
+
+
+#wall .wallpost .commentUsername {
+	float: left;
+	width: 100px;
+	font-weight: bold;
+	font-size: 10px;
+	color: #333;
+	margin-top: 14px;
+}
+
+#wall .wallpost .commentPost {
+	float: right;
+	width: 383px;
+	font-size: 11px;
+	background-color: #eeeeee;
+	padding: 14px 10px 14px 10px;
+}
+
+
+#wall .wallpost .commentFooter {
+	position: relative;
+}
+
+#wall .wallpost .commentTimestamp {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-size: 9px;
+	background-color: #fafafa;
+	color: #999999;
+	padding-right: 3px;
+	margin-top: -8px;
+	z-index: 51;
+}
+
+
+#wall .wallpost .commentSubline {
+	position: absolute;
+	top: 7px;
+	left: 1px;
+	width: 508px;
+	height: 1px;
+	border-top: 1px dotted #c4c4c4;
+	margin-top: -7px;
+	margin-left: 1px;
+	z-index: 50;
+}
+
+
+
+#wall .wallpost .controls {
+	background-color: #;
+	width: 376px;
+	margin-left: 150px;	
+	font-size: 11px;
+	padding: 10px;
+	visibility: hidden;
+}
+
+
+#wall .wallpost .controls a {
+	text-decoration: none;
+	color: #999999;
+}
+
+#wall .wallpost .controls img {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+#wall .commentBox{
+	border-top: 1px dotted #CCCCCC;
+	width: 397px; 
+	padding: 3px; 
+	background: #F3F3F3;
+	margin-left: 150px;
+}
+
+#wall .commentMark { width:380px; margin: 7px 5px 5px 5px; font-size:11px; }
+
+
+#wall .form { padding: 20px 20px 10px; background: #E0F4F8; width: 580px; overflow: hidden; }
+#wall .form p { margin: 0 0 10px 0; float:left; clear:both; display: block; }
+#wall .form label { font: bold 0.9em Helvetica, Arial, sans-serif; color: #000000; padding: 0 0 0 5px;}
+#wall .form .w { float: left; clear: both; padding: 5px 5px 0; background: #D7EBEF; font: bold 0.8em Helvetica, Arial, sans-serif; color: #000000; overflow: hidden; }
+#wall .form .w span { padding: 0 0 5px; float:left; }
+#wall .form .input { border: 1px solid #A5C2C8; line-height: 20px; padding: 5px 5px 5px 5px; margin: 0 0 5px 0; width: 537px; font: bold 16px Helvetiva, Arial, sans-serif; color:#000000 }
+#wall .form .w label { padding:0; }
+#wall #heading {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:56px;
+	color:#CC0000;				
+}
+
+#wall #bottomMoreButton{
+	margin-top: 15px;
+	border-top: 1px dotted #c4c4c4;
+	text-align:center; 
+	width:622px; 
+	height:13px; 
+	
+}
+
+
+#wall input {
+   font-size:13px;
+}
+
+#wall .button, #wall .button:visited {
+	display: inline-block; 
+	color: #fff; 
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#wall .small.button, #wall .small.button:visited { 
+	font-size: 14px;
+}
+
+#wall .button:hover { background-color: #111; color: #fff; }
+#wall .button:active { top: 1px; }
+
+#wall .button, #wall .button:visited, #wall .blue { 
+	background-color: #E0E0E0; color:#fff; font-size:14px;  cursor:auto; padding:5px; width:310px; 
+}
+
+#wall .Detail.button, #wall .Detail.button:visited{ 
+	font-weight:bold;
+	background-color:#333333;
+	font-size: 12px;
+	text-align:center;
+	font-weight:bold;
+	color:#FFFFFF;
+	cursor:pointer;
+	width:33px;
+}
+	
+#wall .comment.button, #wall .comment.button:visited{ 
+	font-weight:bold;
+	background-color:#333333;
+	font-size: 12px;
+	text-align:center;
+	margin: 5px;									
+	font-weight:bold;
+	color:#FFFFFF;
+	cursor:pointer;
+	width:60px;
+}
+
+#wall .composer {
+	padding: 11px 0 0 9px;
+	width:600px;
+}
+#wall #postInput{ 
+	padding:6px;
+	width:590px;
+	height:40px
+}
+#wall a#link{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#3B5998;
+	font-weight:bolder;
+}
+	
+
+#wall .postedComments b {
+	font-size:12px;
+	color:#666666;
+	cursor:pointer;
+}
+
+#wall a.c_delete {
+	color:#3B5998;
+	font-size:11px;
+}
+
+
+#wall .top_area{
+	background:#627AAD;
+	font-size:14px;
+	color:#FFFFFF;
+	font-weight:bold;
+	padding:6px 6px 6px 12px;		
+}
+#wall .name b{
+	font-size:14px;
+	color:#666666;
+	cursor:pointer;
+}
+#wall .name{
+	font-size:14px;
+	color:#333;
+	width:430px;
+	text-align:left;
+	padding-left:9px;
+	}
+#wall a.delete{
+	float:left;
+	color:#666666;
+	display:block;
+	padding:3px 7px;
+	text-decoration:none;
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent none repeat scroll 0 0;
+	border:0 none;
+	color:#333333;
+	cursor:pointer;
+	display:none;
+	font-family:'Lucida Grande',Tahoma,Verdana,Arial,sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	margin:0;
+	outline-color:-moz-use-text-color;
+	outline-style:none;
+	outline-width:medium;
+	white-space:nowrap;
+}
+#wall a.delete:hover{
+	opacity:1;filter:alpha(opacity = 100);-ms-filter:'alpha(opacity = 100)';
+	border:solid #B1B1B1 1px;
+	background:#EEEEEE;
+	padding: 3px 7px;
+	}
+#wall .name a{
+	color:#3B5998;
+	font-size:11px;
+	margin:3px 3px 3px 6px;
+}
+#wall .name em{
+	color:#333;
+	font-style:normal;
+	width:110px;
+	font-size:11px;
+}
+#wall .name span{
+	color:#777777;
+	font-size:11px;
+}
+
+/* Chat bar
+------------------------------------------------------------------------------------------- */
+
+#footpanel {
+	position: fixed;
+	bottom: 0; left: 0;
+	z-index: 3000;
+	background: #e3e2e2;
+	border: 1px solid #c3c3c3;
+	border-bottom: none;
+	width: 94%;
+	margin: 0 3%;
+	font: 10px normal Verdana, Arial, Helvetica, sans-serif;
+}
+
+*html #footpanel { /*--IE6 Hack - Fixed Positioning to the Bottom--*/
+	margin-top: -1px; /*--prevents IE6 from having an infinity scroll bar - due to 1px border on #footpanel--*/
+	position: absolute;
+	top:expression(eval(document.compatMode &&document.compatMode=='CSS1Compat') ?documentElement.scrollTop+(documentElement.clientHeight-this.clientHeight) : document.body.scrollTop +(document.body.clientHeight-this.clientHeight));
+}
+
+#footpanel ul {
+	padding: 0; margin: 0;
+	float: left;
+	width: 100%;
+	list-style: none;
+	border-top: 1px solid #fff;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+#footpanel ul li{
+	padding: 0; margin: 0;
+	float: left;
+	position: relative;
+}
+
+#footpanel ul li a{
+	padding: 5px;
+	float: left;
+	text-indent: -9999px;
+	height: 16px; width: 16px;
+	text-decoration: none;
+	color: #333;
+	position: relative;
+}
+
+html #footpanel ul li a:hover{	background-color: #fff; }
+
+html #footpanel ul li a.active { /*--Active state when subpanel is open--*/
+	background-color: #fff;
+	height: 17px;
+	margin-top: -3px; /*--Push it up 3px to attach the active button to subpanel--*/
+	border: 1px solid #000;
+	border-top: none;
+	z-index: 200; /*--Keeps the active area on top of the subpanel--*/
+	position: relative;
+}
+html #footpanel ul li a.active span { /*--Move text/img down--*/
+	display: block;
+	margin-top: 3px;
+}
+
+
+a.home{	background: url(/public/images/icons/fugue/icons/home.png) no-repeat center center; }
+a.profile{	background: url(/public/images/icons/fugue/icons/user.png) no-repeat center center;  }
+a.contacts{	background: url(/public/images/icons/fugue/icons/address-book.png) no-repeat center center; }
+a.playlist{	background: url(/public/images/icons/fugue/icons/document-music-playlist.png) no-repeat center center; }
+a.videos{	background: url(/public/images/icons/fugue/icons/film.png) no-repeat center center; }
+a.messages{	background: url(/public/images/icons/fugue/icons/mail.png) no-repeat center center; }
+a.editprofile{	background: url(/public/images/icons/fugue/icons/wrench-screwdriver.png) no-repeat center center; }
+
+#footpanel a.chat{	
+	width: 101px;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #e3e2e2;
+	padding-left: 6px;
+	text-indent: 0; /*--Reset text indent--*/
+}
+
+#footpanel a.chat img{	
+	border: none;
+	vertical-align: text-bottom;
+	margin-right: 5px;
+}
+
+a.alerts{	
+	background: url(/public/images/icons/fugue/icons/newspaper.png) no-repeat center center;	 	
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #e3e2e2;
+}
+
+#footpanel li#friendspanel, #footpanel li#alertpanel, #footpanel li.chatpanel {	float: right; }  /*--Right align the chat and alert panels--*/
+
+#footpanel ul li div a { /*--Reset link style for subpanel links--*/
+	text-indent: 0;
+	width: auto;
+	height: auto;
+	padding: 0;
+	float: none;
+	color: #00629a;
+	position: static;
+}
+
+#footpanel ul li div a:hover {	text-decoration: underline; } /*--Reset link style for subpanel links--*/
+
+#footpanel .subpanel {
+	position: absolute;
+	left: 0; bottom: 27px;
+	display: none;	/*--Hide by default--*/
+	width: 253px;
+	border: 1px solid #000;
+	background: #fff;
+	overflow: hidden;
+	padding-bottom: 3px;
+}
+
+#footpanel h3 {
+	background: #526ea6;
+	padding: 5px 10px;
+	color: #fff;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+
+#footpanel h3 span { 
+	font-size: 1.5em;
+	float: right;
+	line-height: 0.6em;	
+	font-weight: normal;
+}
+
+#footpanel .subpanel ul{
+	padding: 0; margin: 0;
+	background: #fff;
+	width: 100%;
+	overflow: auto;
+}
+
+#footpanel .subpanel li{ 
+	float: none; /*--Reset float--*/
+	display: block;
+	padding: 0; margin: 0;
+	overflow: hidden;
+	clear: both;
+	background: #fff;
+	position: static;  /*--Reset relative positioning--*/
+	font-size: 0.9em;
+}
+/*
+#friendspanel .subpanel li { background: url(/public/images/icons/fugue/icons/dash.gif) repeat-x left center; } 
+*/
+#friendspanel .subpanel li span {
+	padding: 5px;
+	background: #fff;
+	color: #777;
+	float: left;
+}
+
+#friendspanel .subpanel li a img {
+	float: left;
+	margin: 0 5px;
+}
+
+#friendspanel .subpanel li a{
+	padding: 3px 0;	margin: 0;
+	line-height: 22px;
+	height: 22px;
+	background: #fff;
+	display: block;
+}
+
+#friendspanel .subpanel li a:hover {
+	background: #3b5998;
+	color: #fff;
+	text-decoration: none;
+}
+
+#alertpanel .subpanel, #friendspanel .subpanel { right: 0; left: auto; 
+
+#alertpanel .subpanel li {
+	border-top: 1px solid #f0f0f0;
+	display: block;
+}
+
+#alertpanel .subpanel li p {padding: 5px 10px;}
+
+#alertpanel .subpanel li a.delete{
+	background: url(/public/images/icons/fugue/icons/delete_x.gif) no-repeat;
+	float: right;
+	width: 13px; height: 14px;
+	margin: 5px;
+	text-indent: -9999px;
+	visibility: hidden;
+}
+
+#alertpanel .subpanel li a.delete:hover { background-position: left bottom; }
+
+#footpanel #alertpanel li.view {
+	text-align: right;
+	padding: 5px 10px 5px 0;
+}
+

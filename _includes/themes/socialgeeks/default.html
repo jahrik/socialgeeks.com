@@ -1,22 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-    <meta name="author" content="{{ site.author.name }}">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<title>{{ page.title }}</title>
+	{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+	<meta name="author" content="{{ site.author.name }}">
 
-    <!-- atom & rss feed -->
-    <link href="atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-    <link href="rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+	<!-- atom & rss feed -->
+	<link href="atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+	<link href="rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
 
-  </head>
+	<link type="text/css" rel="stylesheet" href="/public/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/public/js/colorbox/colorbox.css" />
+	<link rel="stylesheet" type="text/css" href="/public/js/jqtransform/jqtransform.css" />
 
-  <body>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/public/js/functions.js"></script>
+	<script type="text/javascript" src="/public/js/colorbox/jquery.colorbox-min.js"></script>
+	<script type="text/javascript" src="/public/js/jqtransform/jquery.jqtransform.js"></script>
+	<script type="text/javascript" src="/public/js/jquery.alphanumeric.pack.js"></script>
 
-      <div class="content">
-        {{ content }}
-      </div>
+</head>
 
-  </body>
+<body>
+
+{{content}}
+
+</body>
 </html>

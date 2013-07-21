@@ -1,5 +1,72 @@
-<div class="page-header">
-  <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
+<div id="headerSub">
+	<div class="background">
+		<div class="container">
+			<div class="logo"><a href="/"><img src="/public/images/main/logoSub.png" alt="SocialGeeks" border="0" /></a></div>
+			<div id="accountMenu">
+				<div class="avatar avatar24" style="background-image: url('/public/cache/avatars/_24.PNG');" ></div>
+				<div id="toggle"></div>
+				<div id='accountMenuPanel'>
+					<ul>
+						<li><a href="">Home</a></li>
+						<li>Settings</li>					
+						<li>Privacy</li>
+						<li>Connections</li>
+						<li>Notifications</li>
+						<li><a href="/users/signout.php">Sign out</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
-    {{ content }}
+<div id="main">
+	<div class="background">
+		<div class="container">
+			<div style="position: absolute; width: 644px;">
+				<div class="wallBoxTop"></div>
+				<div class="wallBoxBG" id="profile">
+					<div style="margin-left: 11px;">
+						<div class="info" style="padding: 15px; float: left;">
+							<h1>{{ page.title }}</h1>
+							{% if page.tagline %}<h3>{{ page.tagline }}</h3>{% endif %}
+						</div>
+						<div class="clear"></div>
+					</div>
+
+					<div style="margin-left: 11px; background: url(/public/images/main/wallTopBG.png) no-repeat;">
+						
+						<div id="wall" style="padding: 15px; font-size: 13px; line-height: 16px;">
+							{{ content }}
+						</div>	
+					</div>
+				</div> 
+				<div class="wallBoxBottom"></div>
+			</div>
+			
+			<div style="position: absolute; right:0px; width: 368px;">
+				<div class="blackSmBoxTop"></div>
+				<div class="blackSmBoxBG">
+					<div style="margin-left: 12px; width: 345px;">
+						
+						<div style="padding: 15px 15px 10px 15px;">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat.
+						</div>
+						<div style="border-bottom: 1px dotted #4275b4; padding: 5px 15px 0 15px;"></div>
+						<div class="clear"></div>
+						<div style="padding: 15px 15px 10px 15px;">
+							<a href="/Bugs"><img src="/public/images/icons/beta.png" border="0" style="float: left; margin-right: 15px;" /></a>
+							<div class="betaNotice">SocialGeeks.com is currently available as a beta release.  Some could even call it 'alpha' but that's not as cool!  We recommend connecting with the <a href="/Blog"><strong>SocialGeeks Blog</strong></a> to keep up with the ongoing development if you are interested.  Be sure to <a href="/Bugs"><strong>submit any bugs</strong></a> you find!  Thanks!</div> 
+							<div class="clear"></div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="blackSmBoxBottom"></div>
+			</div>
+		</div>
+	</div>
+</div>
