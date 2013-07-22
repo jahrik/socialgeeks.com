@@ -1,7 +1,12 @@
 ---
 layout: post
-title: "Test Event"
-description: ""
-category: event 
-tags: []
+title: "SGCTF 1 -- May 4, 2013"
+description: "Twin Falls Highschool"
+category: event
+tags: [
+	featured
+]
+navigation: event
 ---
+
+
