@@ -4,18 +4,16 @@
 
 <div class="row-fluid post-full">
 	<div class="span12">
-		<div class="date">
-			<span>{{ page.date | date_to_long_string }}</span>
-		</div>
 		<div class="content">
 			{{ content }}
 		</div>
+
+	{% include themes/socialgeeks/navigation.html %}
 
 	{% unless page.categories == empty %}
 		<ul class="tag_box inline">
 			<li><i class="icon-folder-open"></i></li>
 			{% assign categories_list = page.categories %}
-			{% include JB/categories_list %}
 		</ul>
 	{% endunless %}  
 
