@@ -28,7 +28,39 @@ title: SocialGeeks Inc.
 </div>
 
 <div class="blackBoxTop"></div>
-<div class="blackBoxBG">
+<div class="blackBoxBG summaryBox">
+	<div style="margin: 0 30px; color: #fff;">
+		<div style="width: 50%; float: left;">
+			<h3>Features Events</h3>
+
+			<ul class="posts">
+				{% for post in site.posts %}
+				{% if post.category == "event" %}
+					<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.category }}</a></li>
+				{% endif %}
+				{% endfor %}
+			</ul>
+
+			<h3>Recent Blogs Posts</h3>
+
+			<ul class="posts">
+			{% for post in site.posts %}
+				{% if post.category == "blog" %}
+				<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+				{% endif %}
+			{% endfor %}
+			</ul>
+
+		</div>		
+		<div style="width: 50%; float: left;">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+	</div>
 
 {% include articles.html %}
 
