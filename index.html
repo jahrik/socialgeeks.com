@@ -35,9 +35,9 @@ title: SocialGeeks Inc.
 
 			<ul class="posts">
 				{% for post in site.posts %}
-				{% if post.category == "event" %}
-					<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.category }}</a></li>
-				{% endif %}
+					{% if post.category contains "event" %}
+					<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+					{% endif %}
 				{% endfor %}
 			</ul>
 
@@ -45,7 +45,7 @@ title: SocialGeeks Inc.
 
 			<ul class="posts">
 			{% for post in site.posts %}
-				{% if post.category == "blog" %}
+				{% if post.category contains "post" %}
 				<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endif %}
 			{% endfor %}
