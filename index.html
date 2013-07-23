@@ -31,13 +31,16 @@ title: SocialGeeks Inc.
 <div class="blackBoxBG summaryBox">
 	<div style="margin: 0 30px; color: #fff;">
 		<div style="width: 50%; float: left;">
-			<h3>Features Events</h3>
+			<h3>Feature Events</h3>
 
 			<ul class="posts">
 				{% for post in site.posts %}
-					{% if post.category contains "event" %}
-					<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-					{% endif %}
+					{% assign tags_list = post.tags %}
+					{% for tag in tags_list %}
+						{% if tag contains "feature" %}
+						<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+						{% endif %}
+					{% endfor %}
 				{% endfor %}
 			</ul>
 
