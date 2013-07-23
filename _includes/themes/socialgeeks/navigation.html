@@ -1,10 +1,22 @@
 <div id="navigation">
 
+{% if page.navigation contains 'post' %}
+
 // navigation: post
+
+{% endif %}
+
+{% if page.navigation contains 'event' %}
 
 // navigation: event
 
+{% endif %}
+
+{% if page.navigation contains 'page' %}
+
 // navigation: page
+
+{% endif %}
 
 </div>
 
