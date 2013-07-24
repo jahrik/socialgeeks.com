@@ -23,11 +23,13 @@ title: SocialGeeks Inc.
 		</a>
 	</div>
 	<div class="panel">
+		<a href="/contact.html">
 		<img src="/public/images/icons/getInvolved.png" />
 		<div>
 			<h3>Get Involved</h3>
 			Help us by becoming a sponsor, mentor or geek contributor.
 		</div>
+		</a>
 	</div>
 </div>
 
@@ -44,7 +46,7 @@ title: SocialGeeks Inc.
 					{% if tag contains "feature" %}
 					<li>
 						{% if post.thumbnail %}
-						<img src="public/images/thumbnails/{{ post.thumbnail }}" alt="Featured Event" />
+						<img src="public/images/thumbnails/{{ post.thumbnail }}" alt="Featured Event" align="left" />
 						{% endif %}
 					<span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a><br />
 					{{ post.description }}</li>
@@ -60,7 +62,7 @@ title: SocialGeeks Inc.
 				{% if post.category contains "post" %}
 				<li>
 					{% if post.thumbnail %}
-       					<img src="public/images/thumbnails/{{ post.thumbnail }}" alt="Featured Event" />
+       					<img src="public/images/thumbnails/{{ post.thumbnail }}" alt="Featured Event" align="left" />
                                         {% endif %}
 				<span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
 				{{ post.description }}</li>
