@@ -10,4 +10,5 @@ Thumbs.db
 .rvmrc
 
 _jekyll_s3.yml
+*.swp
 
