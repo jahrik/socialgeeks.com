@@ -38,14 +38,19 @@ title: SocialGeeks Inc.
 			<h3><a href="events.html">Feature Events</a></h3>
 
 			<ul class="posts">
-				{% for post in site.posts %}
-					{% assign tags_list = post.tags %}
-					{% for tag in tags_list %}
-						{% if tag contains "feature" %}
-						<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+			{% for post in site.posts %}
+				{% assign tags_list = post.tags %}
+				{% for tag in tags_list %}
+					{% if tag contains "feature" %}
+					<li>
+						{% if post.thumbnail %}
+						<img src="public/images/thumbnails/{{ post.thumbnail }}" alt="Featured Event" />
 						{% endif %}
-					{% endfor %}
+					<span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a><br />
+					{{ post.description }}</li>
+					{% endif %}
 				{% endfor %}
+			{% endfor %}
 			</ul>
 
 			<h3><a href="posts.html">Recent Posts</a></h3>
@@ -53,7 +58,12 @@ title: SocialGeeks Inc.
 			<ul class="posts">
 			{% for post in site.posts %}
 				{% if post.category contains "post" %}
-				<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+				<li>
+					{% if post.thumbnail %}
+       					<img src="public/images/thumbnails/{{ post.thumbnail }}" alt="Featured Event" />
+                                        {% endif %}
+				<span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
+				{{ post.description }}</li>
 				{% endif %}
 			{% endfor %}
 			</ul>

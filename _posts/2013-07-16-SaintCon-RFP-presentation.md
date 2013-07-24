@@ -1,9 +1,11 @@
 ---
 layout: post
 title: "SocialGeeks will be at SaintCon!"
+description: "This year SocialGeeks planned and executed a Capture the Flag event at a small Idaho high-school."
 category: post 
+thumbnail: sgctf2.jpg
+category: post
 tags: []
-navigation: post 
 ---
 
 Dan and geeks will be presenting this year at <a href="http://www.saintcon.org/" target="_blank">SaintCon</a>, scroll down for SocialGeeks.  SaintCon is a computer security conference put on by the Utah Educational Network. 
