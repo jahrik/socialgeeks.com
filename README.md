@@ -34,38 +34,7 @@ This will get jekyll running on the site files so that it automatically generate
 The --server option puts them up on http://localhost:4000 so you can monitor the changes as you work.  
 
 `cd website`  
-`jekyll --safe --server`  
-
-### Working with GIT
-Once you have the site to where you are ready to commit add your changes into the repository.  
-
-`git add .`  
-`git commit -m 'Your message goes here'`  
-
-If you are NOT ready to merge with master you can push your branch up to GitHub for safe keeping.  
-
-`git push origin yourbranch`  
-
-If you are really sure of what you've done then merge them in with master.  
-
-`git checkout master`  
-`git pull`  
-
-If master has changed then you need to rebase your branch off of that.  
-
-	Don't be that guy that forces up a rebase on a branch you are working on with others. Use this for your personal branches.  
-
-`git checkout yourbranch`  
-`git rebase master`  
-
-Then merge the changes into master  
-
-`git checkout master`  
-`git merge yourbranch`  
-
-And push the changes up to GitHub  
-
-`git push origin master`  
+`jekyll -w server`  
 
 ### jekyll-s3 to push up to live site
 #### Setup credentials file
