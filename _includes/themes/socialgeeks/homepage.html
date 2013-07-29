@@ -1,124 +1,62 @@
-<div id="header">
-	<div class="background">
-		<div class="container">
-			<div class="logo"><img src="/public/images/main/logo.png" alt="SocialGeeks" /></div>
-			<h1 class="slogan"><span>A place to connect, explore and learn with others</span><br /><span>who passionately pursue their interests.</span></h1>
-			<ul class="subMenu">
-				<li><a href="/about.html">About</a></li>
-				<li><a href="/posts.html">Blog</a></li>
-				<li><a href="/events.html">Events</a></li>
-				<li><a href="/contact.html">Contact</a></li>
-				<li><a href="/sponsors.html">Sponsors</a></li>
-			</ul>
-			<div class="signUp">
-				<div class="new">New to SocialGeeks?<br /><span>It's fast, simple and free to sign up.</span></div>
-				<div class="button"><img src="public/images/main/button_signUp.png" alt="Sign Up!" id="signUpButton" /></div>
-				<div class="account">Already have an account?</div>
-				<div id="signInButton">
-					<div class="signIn">Sign in</div>
-					<div id="toggle"></div>
+		<div id="header-wrapper">
+			<header id="header">
+				<div class="container">
+
+					<a href="#" id="logo"></a>
+					
+					<nav id="nav">
+						<ul>
+							<li class="current_page_item"><a href="index.html">Home</a></li>
+							<!-- 	
+							<li>
+								<span>Dropdown</span>
+								<ul>
+									<li><a href="#">Lorem ipsum dolor</a></li>
+									<li><a href="#">Magna phasellus</a></li>
+									<li>
+										<span>Phasellus consequat</span>
+										<ul>
+											<li><a href="#">Lorem ipsum dolor</a></li>
+											<li><a href="#">Phasellus consequat</a></li>
+											<li><a href="#">Magna phasellus</a></li>
+											<li><a href="#">Etiam dolore nisl</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Veroeros feugiat</a></li>
+								</ul>
+							</li> 
+							-->
+							<li><a href="#">About</a></li>
+							<li><a href="#">Events</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Sponsors</a></li>
+						</ul>
+					</nav>
+
 				</div>
-				<div id="signInPanel">
-					<div style="margin: 42px 0 0 22px;">
-					<form name="signInForm" method="post" action="" class="jqtransform" autocomplete="off">
-						<div class="rowElem"><label for="loginUsername">Username</label><input type="text" name="loginUsername" id="loginUsername" size="20" maxlength="16"></div>
-						<br class="clear" />
-						<div class="rowElem"><label for="loginPassword">Password</label><input type="password" name="loginPassword" id="loginPassword" size="20"></div>
-						<div class="rowElem"><label for="remember">
-							
-						</label><input type="checkbox" name="remember" /><label class="checkboxvalue" style="width: auto; margin-left: 10px; font-size:12px;">Remember Me</label></div>
-						<br class="clear" />
-						<div style="margin-left: 193px;"><img src="public/images/main/button_signIn.png" width="99" height="36" id="submitSignInButton" /></div>
-						<div id="signInErrors" style="color:#FF0000;"></div>
-					</form>
+				
+			</header>
+
+			<div class="container">
+				<div class="row">
+					<div class="12u">
+					
+						<div id="banner">
+							<h2>
+								<strong>connect</strong>, <strong>explore</strong> and <strong>learn</strong> with others<br/>
+								who passionately pursue their interests.<br/>
+								<div style="margin-top: 16px;">
+									We call them <strong>geeks</strong>. Embrace it.
+								</div>
+							</h2>
+
+							<p><strong>Get Involved: </strong> &nbsp;Help us by becoming<br>a sponsor, mentor or geek contributor.</p>
+							<a href="#" class="button button-big button-icon button-icon-rarrow">Learn More</a>
+						</div>
+
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-
-<div id="main">
-	<div class="background">
-		<div class="container">
-			{{content}}
-		</div>
-	</div>
-</div>
-
-<div id="dialogs">
-	<div id='signUpBox'>
-		<div class="header" id="signUpErrors">Ready to come to terms with being a geek?</div>
-		<form name="signUpForm" method="post" action="" class="jqtransform" autocomplete="off" style="margin-left: 60px;">
-			<div class="rowElem"><label for="fullname">Full Name</label><input type="text" name="fullname" id="fullname" size="20" maxlength="32"></div>
-			<br class="clear" />
-			<div style="padding-left:80px; margin:3px 0 15px 0;">This will remain private unless you choose to reveal it to friends later.</div>
-			<div class="rowElem"><label for="email">Email</label><input type="text" name="email" id="email" size="20" /></div>
-			<br class="clear" />
-			<div style="padding-left:80px; margin:3px 0 15px 0;"><span id="emailError">Your Email will also remain private and is only used for good. We promise!</span></div>
-			<div class="rowElem"><label for="username">Username</label><input name="username" type="text" id="username" size="20" maxlength="16">
-			</div>
-			<br class="clear" />
-			<div style="padding-left:80px; margin:3px 0 10px 0; height:16px;"><span id="usernameURL">Please use only letters, numbers or underscores.</span></div>
-			<div class="rowElem"><label for="username">Password</label><input type="password" name="password" id="password" size="20"></div>
-			<br class="clear" />
-			<div class="button" style="padding-left:74px; margin-top:18px"><img src="public/images/main/button_signUpLight.png" alt="Sign Up!" id="submitSignUpButton" /></div>
 		
-		</form>
-	</div>
-</div>
-
-<script type="text/javascript"> 
-	var availabilityCheck;
-	
-	$(document).ready(function(){
-				
-		$("form.jqtransform").jqTransform();
-		$("#dialogs, #signInPanel").hide(); // hide after jqTransform, workaround
-		
-		$('#username').alphanumeric({allow:"_"});
-		$('#username').keyup(function() {
-			if ($('#username').val() != '') {
-				$('#usernameURL').html("<img src='/public/images/loaderSmall.gif' style='vertical-align:middle;'>&nbsp;&nbsp;Checking Availability...");
-				clearTimeout(availabilityCheck);
-				availabilityCheck = setTimeout("$('#usernameURL').load('/users/checkAvailability.php',{u:$('#username').val()});",400);
-			} else {
-				$('#usernameURL').html("Please use only letters, numbers or underscores.");
-			}
-		});
-		
-		$('#email').change(function() {
-			if (validateEmail($('#email').val())) {
-				$('#emailError').html("Your Email will also remain private and is only used for good. We promise!");
-			} else {
-				$('#emailError').html("<font color='#FF0000'>That doesn't look like a valid Email address. Care to try again?</font>");
-			}
-		});
-		
-		$('#signUpButton').click(function() {
-			$.fn.colorbox({speed: 250, width:692, height:483, inline:true, href:'#signUpBox', open:true});
-		});
-		
-		$('#submitSignUpButton').click(function() {
-			$('#signUpErrors').load("/users/signup.php", {fullname: $('#fullname').val(), email: $('#email').val(), username: $('#username').val(), password: $('#password').val()});
-		});
-		
-		$('#signInButton').click(function() {
-			if ($('#signInPanel').is(':visible')) {
-				$('#signInPanel').fadeOut(200);
-				$('.signIn').css('color','#fff');
-				$('#toggle').css('background-image','url(/public/images/main/toggleArrowDown.png)')
-			} else {
-				$('#signInPanel').fadeIn(200);
-				$('.signIn').css('color','#000');
-				$('#toggle').css('background-image','url(/public/images/main/toggleArrowUp.png)')
-			}
-		});
-		
-		$('#submitSignInButton').click(function() {
-			$('#signInErrors').load("/users/signin.php", {username: $('#loginUsername').val(), password: $('#loginPassword').val()});
-		});
-		
-	});
-
-</script>
+		{{content}}

@@ -1,30 +1,92 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta charset="utf-8">
-	<title>{{ page.title }}</title>
-	{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-	<meta name="author" content="{{ site.author.name }}">
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SocialGeeks Inc.</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-	<!-- atom & rss feed -->
-	<link href="atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-	<link href="rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+		<title>{{ page.title }}</title>
+		{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+		<meta name="author" content="{{ site.author.name }}">
+		<meta name="keywords" content="" />
 
-	<link type="text/css" rel="stylesheet" href="/public/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="/public/js/colorbox/colorbox.css" />
-	<link rel="stylesheet" type="text/css" href="/public/js/jqtransform/jqtransform.css" />
+		<!-- atom & rss feed -->
+		<link href="atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+		<link href="rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
 
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-	<script type="text/javascript" src="/public/js/functions.js"></script>
-	<script type="text/javascript" src="/public/js/colorbox/jquery.colorbox-min.js"></script>
-	<script type="text/javascript" src="/public/js/jqtransform/jquery.jqtransform.js"></script>
-	<script type="text/javascript" src="/public/js/jquery.alphanumeric.pack.js"></script>
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800" rel="stylesheet" type="text/css" />
+		<script src="public/js/jquery.min.js"></script>
+		<script src="public/js/jquery.dropotron.js"></script>
+		<script src="public/js/config.js"></script>
+		<script src="public/js/skel.min.js"></script>
+		<script src="public/js/skel-panels.min.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="public/css/skel-noscript.css" />
+			<link rel="stylesheet" href="public/css/style.css" />
+			<link rel="stylesheet" href="public/css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		<!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
+	</head>
+	<body class="homepage">
 
-</head>
+		{{content}}
 
-<body>
+		<div id="footer-wrapper">
+			<footer id="footer" class="container">
+				<div class="row">
+					<div class="6u">
+					
+						<section>
+							<h2>SocialGeeks Inc.</h2>
+							<p>
+								SocialGeeks Inc. is a student leadership organization focusing on project and game based learning 
+								through the use of community members and professionals in the fields of technology. Geek incubator. 
+								Collect geeks, mentor, be mentored, use network to enhance, supplement, replace high school computer 
+								curriculum. Wash, repeat.
+							</p>
+							<a href="#" class="button button-alt button-icon button-icon-rarrow">Learn More</a>
+						</section>
+											
+					</div>
+					<div class="3u">
+					
+						<section>
+							<h2>Stay Connected</h2>
+							<span class="byline">Be informed by email of upcoming events and other happenings.</span>
+							<p style="margin-top: 20px;">
+								<label>Name: </label><input type="text" />
+								<label>Email: </label><input type="text" />
+							</p>
+							<a href="#" class="button button-alt button-icon button-icon-rarrow" style="margin-left: 60px;">Submit</a>
+						</section>
+					
+					</div>
+					<div class="3u">
+					
+						<section>
+							<h2>INDEX</h2>
+							<ul class="style2">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">Events</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Sponsors</a></li>
+							</ul>
+						</section>
+					
+					</div>
 
-{{content}}
+				</div>
+				<div class="row">
+					<div class="12u">
+						<div id="copyright">
+							&copy; SocialGeeks Inc., a nonprofit organization. All rights reserved.
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
 
-</body>
+	</body>
 </html>
