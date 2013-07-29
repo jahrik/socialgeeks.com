@@ -2,11 +2,11 @@
 	<header id="header">
 		<div class="container">
 
-			<a href="#" id="logo"></a>
+			<a href="/index.html" id="logo"></a>
 			
 			<nav id="nav">
 				<ul>
-					<li><a href="index.html">Home</a></li>
+					<li><a href="/index.html">Home</a></li>
 					<!-- 	
 					<li>
 						<span>Dropdown</span>
@@ -43,23 +43,7 @@
 		<div class="inner">
 			<div class="container">
 				<div class="row">
-					<div class="8u skel-cell-mainContent">
-						<div id="content">
-						
-							<article>
-
-								<header class="major">
-									<h2>{{ page.title }}</h2>
-									{% if page.tagline %}<span class="byline">{{ page.tagline }}</span>{% endif %}
-								</header>
-								
-								{{ content }}
-
-							</article>
-					
-						</div>
-					</div>
-					<div class="4u">
+					<div class="3u">
 						<div id="sidebar">
 							<section>
 								<header class="major">
@@ -77,6 +61,21 @@
 
 								</ul>
 							</section>
+						</div>
+					</div>
+					<div class="9u skel-cell-mainContent">
+						<div id="content">
+						
+							<article>
+
+								<h2>{{ page.title }}</h2>
+								{% if page.tagline %}<span class="byline">{{ page.tagline }}</span>{% endif %}
+							
+								{% if page.thumbnail %}<span class="image image-right"><img src="/public/images/thumbnails/{{ page.thumbnail }}" /></span>{% endif %}
+								{{ content }}
+
+							</article>
+					
 						</div>
 					</div>
 				</div>

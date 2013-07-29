@@ -2,7 +2,7 @@
 layout: event 
 title: "SGCTF 1"
 tagline: "May 4, 2013"
-description: "The Twin Falls SocialGeeks will hold a computer security competition and security Q&A day at the Twin Falls High School."
+description: "The Twin Falls SocialGeeks will hold a computer security competition and security Q&A day at the Twin Falls High School. "
 category: event
 thumbnail: sgctf.png
 tags: [
