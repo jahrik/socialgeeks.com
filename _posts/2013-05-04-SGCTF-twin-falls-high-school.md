@@ -1,16 +1,14 @@
 ---
-layout: page 
-title: "SGCTF 1 -- May 4, 2013"
+layout: event 
+title: "SGCTF 1"
+tagline: "May 4, 2013"
 description: "The Twin Falls SocialGeeks will hold a computer security competition and security Q&A day at the Twin Falls High School."
 category: event
-navigation: event
 thumbnail: sgctf.png
 tags: [
 	featured
 ]
 ---
-
-## <a href="http://ctf1.socialgeeks.com" target="_blank">SGCTF 1</a>  
 
 TWIN FALLS, ID-On May 4, 2013, the Twin Falls SocialGeeks will hold a computer security competition and security Q&A day at the Twin Falls High School.
 

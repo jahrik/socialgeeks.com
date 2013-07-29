@@ -6,7 +6,7 @@
 			
 			<nav id="nav">
 				<ul>
-					<li class="current_page_item"><a href="index.html">Home</a></li>
+					<li><a href="index.html">Home</a></li>
 					<!-- 	
 					<li>
 						<span>Dropdown</span>
@@ -27,7 +27,7 @@
 					</li> 
 					-->
 					<li><a href="#">About</a></li>
-					<li><a href="#">Events</a></li>
+					<li class="current_page_item"><a href="#">Events</a></li>
 					<li><a href="#">Blog</a></li>
 					<li><a href="#">Sponsors</a></li>
 				</ul>
@@ -61,7 +61,22 @@
 					</div>
 					<div class="4u">
 						<div id="sidebar">
-							{% include themes/socialgeeks/navigation.html %}
+							<section>
+								<header class="major">
+									<h2>Events</h2>
+								</header>
+								<ul class="style2">
+
+								{% for post in site.posts %}
+									{% if post.category contains "event" %}
+
+										<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+
+									{% endif %}
+								{% endfor %}
+
+								</ul>
+							</section>
 						</div>
 					</div>
 				</div>

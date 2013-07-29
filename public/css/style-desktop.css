@@ -102,7 +102,7 @@
 	}
 
 	#logo {
-		background-image: url('../images/logo.png');
+		background-image: url('/public/images/logo.png');
 		width: 283px;
 		height: 65px;
 		display: inline-block;

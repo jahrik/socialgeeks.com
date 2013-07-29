@@ -1,10 +1,9 @@
 ---
-layout: page 
+layout: post 
 title: "SocialGeeks will be at SaintCon!"
 description: "This year SocialGeeks planned and executed a Capture the Flag event at a small Idaho high-school."
 category: post 
 thumbnail: sgctf2.jpg
-navigation: post
 tags: []
 ---
 
