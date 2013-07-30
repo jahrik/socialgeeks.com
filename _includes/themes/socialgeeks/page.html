@@ -2,11 +2,11 @@
 	<header id="header">
 		<div class="container">
 
-			<a href="#" id="logo"></a>
+			<a href="/index.html" id="logo"></a>
 			
 			<nav id="nav">
 				<ul>
-					<li class="current_page_item"><a href="index.html">Home</a></li>
+					<li><a href="/index.html">Home</a></li>
 					<!-- 	
 					<li>
 						<span>Dropdown</span>
@@ -27,8 +27,8 @@
 					</li> 
 					-->
 					<li><a href="#">About</a></li>
-					<li><a href="#">Events</a></li>
-					<li><a href="#">Blog</a></li>
+					<li{% if page.category contains 'event' %} class="current_page_item"{% endif %}><a href="#">Events</a></li>
+					<li{% if page.category contains 'post' %} class="current_page_item"{% endif %}><a href="#">Blog</a></li>
 					<li><a href="#">Sponsors</a></li>
 				</ul>
 			</nav>
@@ -43,25 +43,24 @@
 		<div class="inner">
 			<div class="container">
 				<div class="row">
-					<div class="8u skel-cell-mainContent">
+					<div class="3u">
+						<div id="sidebar">
+
+							{% include themes/socialgeeks/navigation.html %} 
+
+						</div>
+					</div>
+					<div class="9u skel-cell-mainContent">
 						<div id="content">
-						
 							<article>
 
-								<header class="major">
-									<h2>{{ page.title }}</h2>
-									{% if page.tagline %}<span class="byline">{{ page.tagline }}</span>{% endif %}
-								</header>
-								
+								<h2>{{ page.title }}</h2>
+								{% if page.tagline %}<span class="byline">{{ page.tagline }}</span>{% endif %}
+							
+								{% if page.thumbnail %}<span class="image image-right"><img src="/public/images/thumbnails/{{ page.thumbnail }}" /></span>{% endif %}
 								{{ content }}
 
 							</article>
-					
-						</div>
-					</div>
-					<div class="4u">
-						<div id="sidebar">
-							{% include themes/socialgeeks/navigation.html %}
 						</div>
 					</div>
 				</div>
