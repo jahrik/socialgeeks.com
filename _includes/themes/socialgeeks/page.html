@@ -26,10 +26,10 @@
 						</ul>
 					</li> 
 					-->
-					<li><a href="#">About</a></li>
-					<li{% if page.category contains 'event' %} class="current_page_item"{% endif %}><a href="#">Events</a></li>
-					<li{% if page.category contains 'post' %} class="current_page_item"{% endif %}><a href="#">Blog</a></li>
-					<li><a href="#">Sponsors</a></li>
+					<li{% if page.category contains 'about' %} class="current_page_item"{% endif %}><a href="/about.html">About</a></li>
+					<li{% if page.category contains 'event' %} class="current_page_item"{% endif %}><a href="/events.html">Events</a></li>
+					<li{% if page.category contains 'post' %} class="current_page_item"{% endif %}><a href="/blog.html">Blog</a></li>
+					<li{% if page.category contains 'sponsors' %} class="current_page_item"{% endif %}><a href="/sponsors.html">Sponsors</a></li>
 				</ul>
 			</nav>
 
