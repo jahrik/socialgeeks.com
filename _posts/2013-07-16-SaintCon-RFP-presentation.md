@@ -7,7 +7,7 @@ thumbnail: sgctf2.jpg
 tags: []
 ---
 
-Dan and geeks will be presenting this year at <a href="http://www.saintcon.org/" target="_blank">SAINTCON</a>, scroll down for SocialGeeks.  SAINTCON is a computer security conference put on by the Utah Educational Network. 
+Dan and geeks will be presenting this year at <a href="http://www.saintcon.org/" target="_blank">SAINTCON</a>.  SAINTCON is a computer security conference put on by the Utah Educational Network. 
 
 <a href="https://github.com/SocialGeeks/npo/blob/master/cfp/saintcon_abstract.md" target="_blank">SAINTCON CFP details on GitHub</a>  
 	
