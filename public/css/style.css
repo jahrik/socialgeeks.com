@@ -821,3 +821,16 @@
 		color: #aaa;
 		line-height: 14px;
 	}
+
+	/* other */
+
+	.mentor {
+		clear: both;
+		margin-bottom: 10px;
+	}
+
+	.mentor img {
+		float: left;
+		margin: 0 15px 10px;
+		border-radius: 8px;
+	}
