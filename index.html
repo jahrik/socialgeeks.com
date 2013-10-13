@@ -49,13 +49,13 @@ title: SocialGeeks Inc.
 
 						<section class="box-article-list">
 							<h2>Featured Events</h2>
+		`					<iframe src="http://player.vimeo.com/video/71392342" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 							{% for post in site.posts %}
 								{% assign tags_list = post.tags %}
 								{% for tag in tags_list %}
 									{% if tag contains "feature" %}
 									<article class="box-excerpt">
 										{% if post.thumbnail %}
-											<a href="{{ post.url }}" class="image image-left"><img src="public/images/thumbnails/{{ post.thumbnail }}" alt="" /></a>
 										{% endif %}
 										<div>
 											<header>

@@ -1,0 +1,42 @@
+<div id="header-wrapper" style="height: 8em;">
+	<header id="header">
+		<div class="container">
+
+			<a href="/index.html" id="logo"></a>
+			
+			<nav id="nav">
+				<ul>
+					<li><a href="/index.html">Home</a></li>
+					<!-- 	
+					<li>
+						<span>Dropdown</span>
+						<ul>
+							<li><a href="#">Lorem ipsum dolor</a></li>
+							<li><a href="#">Magna phasellus</a></li>
+							<li>
+								<span>Phasellus consequat</span>
+								<ul>
+									<li><a href="#">Lorem ipsum dolor</a></li>
+									<li><a href="#">Phasellus consequat</a></li>
+									<li><a href="#">Magna phasellus</a></li>
+									<li><a href="#">Etiam dolore nisl</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Veroeros feugiat</a></li>
+						</ul>
+					</li> 
+					-->
+					<li{% if page.category contains 'about' %} class="current_page_item"{% endif %}><a href="/about.html">About</a></li>
+					<li{% if page.category contains 'event' %} class="current_page_item"{% endif %}><a href="/events.html">Events</a></li>
+					<li{% if page.category contains 'post' %} class="current_page_item"{% endif %}><a href="/blog.html">Blog</a></li>
+					<li{% if page.category contains 'sponsors' %} class="current_page_item"{% endif %}><a href="/sponsors.html">Sponsors</a></li>
+				</ul>
+			</nav>
+
+		</div>
+		
+	</header>
+</div>
+
+	
+{{ content }}
