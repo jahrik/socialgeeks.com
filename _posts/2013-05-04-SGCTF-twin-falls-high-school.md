@@ -6,7 +6,6 @@ description: "The Twin Falls SocialGeeks will hold a computer security competiti
 category: event
 thumbnail: sgctf.png
 tags: [
-	featured
 ]
 ---
 
