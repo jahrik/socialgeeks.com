@@ -53,7 +53,7 @@ title: SocialGeeks Inc.
 							{% for post in site.posts %}
 								{% assign tags_list = post.tags %}
 								{% for tag in tags_list %}
-									{% if tag contains "feature" %}
+									{% if tag contains "featured" %}
 									<article class="box-excerpt">
 										{% if post.thumbnail %}
 										{% endif %}
