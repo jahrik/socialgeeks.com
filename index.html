@@ -4,58 +4,22 @@ title: SocialGeeks Inc.
 ---
 
 <div id="main-wrapper">
-	<div class="main-wrapper-style2">
-		<div class="inner">
-	
-			<section class="container box-feature1">
-				<div class="row">
-					<div class="4u">
-						<section>
-							<span class="image image-full"><img src="public/images/pic01.jpg" alt="" /></span>
-							<header class="second second-geekon">
-								<h3>GET YOUR GEEK ON</h3>
-								<span class="byline">Check out upcoming events and <br />previous geek outs.</span>
-							</header>
-						</section>
-					</div>
-					<div class="4u">
-						<section>
-							<span class="image image-full"><img src="public/images/pic02.jpg" alt="" /></span>
-							<header class="second second-whatdo">
-								<h3>WHAT WE DO</h3>
-								<span class="byline">Connecting and collecting<br>geeks for greater knowledge.</span>
-							</header>
-						</section>
-					</div>
-					<div class="4u">
-						<section>
-							<span class="image image-full"><img src="public/images/pic03.jpg" alt="" /></span>
-							<header class="second second-involved">
-								<h3>GET INVOLVED</h3>
-								<span class="byline">Help us by becoming a sponsor,<br />mentor or geek contributor.</span>
-							</header>
-						</section>
-					</div>
-				</div>
-			</section>
-
-		</div>
-	</div>
 	<div class="main-wrapper-style3">
 		<div class="inner">
 			<div class="container">
 				<div class="row">
-					<div class="8u">
+					<div class="6u">
 
 						<section class="box-article-list">
-							<h2>Featured Events</h2>
+							<h2>Events</h2>
 							{% for post in site.posts %}
 								{% assign tags_list = post.tags %}
 								{% for tag in tags_list %}
 									{% if tag contains "featured" %}
+                                                                		{% if post.category contains "event" %}
 									<article class="box-excerpt">
-										{% if post.thumbnail %}
-										{% endif %}
+											{% if post.thumbnail %}
+											{% endif %}
 										<div>
 											<header>
 												<span class="date">{{ post.date | date_to_long_string }}</span>
@@ -64,58 +28,40 @@ title: SocialGeeks Inc.
 											<p>{{ post.description }}</p>
 										</div>
 									</article>
-
+										{% endif %}
 									{% endif %}
 								{% endfor %}
 							{% endfor %}						
 						</section>
-
-						<section class="box-article-list">
-							<h2>Recent Posts</h2>
-
-							{% for post in site.posts %}
-								{% if post.category contains "post" %}
-
-									<article class="box-excerpt">
-										{% if post.thumbnail %}
-											<a href="{{ post.url }}" class="image image-left"><img src="public/images/thumbnails/{{ post.thumbnail }}" alt="" /></a>
-										{% endif %}
-										<div>
-											<header>
-												<span class="date">{{ post.date | date_to_long_string }}</span>
-												<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-											</header>
-											<p>{{ post.description }}</p>
-										</div>
-									</article>
-
-								{% endif %}
-							{% endfor %}
-						</section>
 					</div>
-					<div class="4u">
+					<div class="6u">
 					
-						<section class="box-spotlight">
-							<h2>Upcoming Event</h2>
-							<article>
-								<a href="#" class="image image-full"><img src="public/images/pic07.jpg" alt=""></a>
-								<header>
-									<h3><a href="#">SocialGeeks at SaintCon</a></h3>
-									<span class="byline">OCT 15-18, 2013</span>
-								</header>
-								<p>This year SocialGeeks planned and executed a Capture the Flag event at a small Idaho high-school. 
-								The 13 hour event included 20 students and 13 mentors.  By the end of the day, the teens, mostly 
-								without programming/linux experience, were coding solutions on linux machines and solving challenges.</p>
+						<section class="box-article-list">
+                                                        <h2>Recent Posts</h2>
 
-								<p>SAINTCON has become the most important and effective security conference event in the State of Utah.  
-									We will be sharing this inspirational story at SAINTCON as we move forward targeting teens with 
-									project and game based learning.</p>
+                                                        {% for post in site.posts %}
+								{% assign tags_list = post.tags %}
+								{% for tag in tags_list %}
+									{% if tag contains "featured" %}
+                                                                		{% if post.category contains "post" %}
 
-								<footer>
-									<a href="/post/2013/07/16/SaintCon-RFP-presentation" class="button button-alt button-icon button-icon-paper">Continue Reading</a>
-								</footer>
-							</article>
-						</section>
+                                                                        <article class="box-excerpt">
+                                                                                {% if post.thumbnail %}
+                                                                                        <a href="{{ post.url }}" class="image image-left"><img src="public/images/thumbnails/{{ post.thumbnail }}" alt="" /></a>
+                                                                                {% endif %}
+                                                                                <div>
+                                                                                        <header>
+                                                                                                <span class="date">{{ post.date | date_to_long_string }}</span>
+                                                                                                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                                                                                        </header>
+                                                                                        <p>{{ post.description }}</p>
+                                                                                </div>
+                                                                        </article>
+										{% endif %}
+	                                                                {% endif %}
+								{% endfor %}
+                                                        {% endfor %}
+                                                </section>
 					
 					</div>
 				</div>
